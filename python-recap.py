@@ -47,6 +47,7 @@ while password != correct_password:
 print("access granted!")    
 """
 
+"""
 age = int(input("Enter your age: "))
 if age<=12:
     print("You are a child")
@@ -56,11 +57,23 @@ elif age<=59:
     print("You are an adult.")
 else: 
     print("You are a senior citizen.")
+"""
 
 
+def age_group(age):
+    if age <= 12:
+        return "You are a child"
+    elif age <= 17:
+        return "You are a teenager."
+    elif age <= 59:
+        return "You are an adult."
+    else:
+        return "You are a senior citizen."
 
-
-
+# ফাংশন কল এবং প্রিন্ট
+age = int(input("Enter your age: "))
+result = age_group(age)
+print(result)
 
 
 

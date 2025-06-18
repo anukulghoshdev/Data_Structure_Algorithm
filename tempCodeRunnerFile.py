@@ -1,4 +1,4 @@
-)
+
 # print(1)
 # count = 2
 # def fibonacci(prev1,prev2):
@@ -14,3 +14,6 @@
 #         return
     
 # fibonacci(0,1)
+
+name = input("Enter your name: ")
+print(name)
