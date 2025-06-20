@@ -15,3 +15,12 @@ def factorial(n):
         return n * factorial(n-1)
 
 print(factorial(5))
+
+# sum of 1 to n
+def  sum_n(n):
+    if n == 1:
+        return 1
+    else: 
+        return n + sum_n(n-1)
+
+print(sum_n(5))
