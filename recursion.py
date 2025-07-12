@@ -24,3 +24,14 @@ def  sum_n(n):
         return n + sum_n(n-1)
 
 print(sum_n(5))
+
+#fibonacci seris using recursion
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+print(fibonacci(5))
+    
