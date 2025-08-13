@@ -35,3 +35,14 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
 print(fibonacci(5))
     
+# assignment 3
+def is_even_recursive(n):
+    if n == 0:
+        return True
+    elif n == 1:
+        return False
+    else: 
+        return is_even_recursive(n-2)
+print(is_even_recursive(6))
+print(is_even_recursive(9))
+
