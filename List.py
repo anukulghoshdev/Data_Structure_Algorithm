@@ -18,6 +18,7 @@ for i in range(len(my_list)):
     print(my_list[i])
 
 # practice problem 1
+# 5টি নাম ইনপুট নিয়ে একটি লিস্টে রাখো এবং সবগুলো প্রিন্ট করো (loop দিয়ে)
 names = []
 for i in range(5):
     nam = input(f"Enter your name {i+1}: ")
