@@ -36,6 +36,8 @@ for name in names:
     print(f"{name}")
 print(names)
 
+
+# type2 practice problem 1:
 names = []
 while True:
     name = input("Enter your name (or type 'exit' to shop): ").strip()
@@ -51,3 +53,52 @@ while True:
 print(f"final names in the list: {names}")
 for i in names: 
     print(f"{i}", end=", ")
+
+
+# practice problem 2
+numbers = []
+i=0
+while i<5:
+    number = int(input("Enter the numbers: "))
+    if type(number) != int:
+        print("Please Enter a valid Number") 
+        continue
+    numbers.append(number)
+    i+=1
+for n in numbers:
+    print(f"{n}", end=" ")
+
+
+# practice problem 2: type2
+numbers = []
+i = 0
+while i < 5:
+    number = input("Enter the numbers: ")
+    if not number.isdigit():   # check number string কিনা
+        print("Please Enter a valid Number")
+        continue
+    numbers.append(int(number))  # এখন convert করলে কোনো error হবে না
+    i += 1
+
+for n in numbers:
+    print(f"{n}", end=" ")
+
+
+# practice problem 2: type 3
+numbers = []  
+i = 0  
+
+while i < 5:  
+    try:  
+        number = int(input("Enter the number: "))  # input কে int এ convert করা হচ্ছে  
+        numbers.append(number)  
+        i += 1  
+    except ValueError:  
+        print("Please enter a valid number!")  
+
+print("The numbers are: ", end=" ")  
+for n in numbers:  
+    print(n, end=" ")  
+
+
+
