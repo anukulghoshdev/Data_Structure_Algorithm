@@ -35,3 +35,19 @@ for i in range(5):
 for name in names:
     print(f"{name}")
 print(names)
+
+names = []
+while True:
+    name = input("Enter your name (or type 'exit' to shop): ").strip()
+    if name.lower() == "exit":
+        break
+    if name == '':
+        print("Please write a valid name!")
+        continue
+    if name in names: 
+        print(f"{name} is already in the list! Please enter a different name.")
+        continue
+    names.append(name)
+print(f"final names in the list: {names}")
+for i in names: 
+    print(f"{i}", end=", ")
