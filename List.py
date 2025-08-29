@@ -17,7 +17,7 @@ for item in my_list:
 for i in range(len(my_list)):
     print(my_list[i])
 
-# practice problem 1
+# practice problem 1 type 1
 # 5টি নাম ইনপুট নিয়ে একটি লিস্টে রাখো এবং সবগুলো প্রিন্ট করো (loop দিয়ে)
 names = []
 for i in range(5):
@@ -37,7 +37,7 @@ for name in names:
 print(names)
 
 
-# type2 practice problem 1:
+# practice problem 1 type2:
 names = []
 while True:
     name = input("Enter your name (or type 'exit' to shop): ").strip()
@@ -55,7 +55,7 @@ for i in names:
     print(f"{i}", end=", ")
 
 
-# practice problem 2
+# practice problem 2 type 1
 numbers = []
 i=0
 while i<5:
@@ -100,5 +100,64 @@ print("The numbers are: ", end=" ")
 for n in numbers:  
     print(n, end=" ")  
 
+# practice problem 3: type 1:
+numbers = []  
+
+n = int(input("How many numbers do you want to enter? "))
+
+for i in range(n):
+    num = int(input(f"Enter number {i+1}: "))
+    numbers.append(num)
+
+print("Your numbers are:", numbers)
 
 
+
+# practice problem 3: type 2:
+numbers = []  
+
+n = int(input("How many numbers do you want to enter? "))
+
+for i in range(n):
+    num = int(input(f"Enter number {i+1}: "))
+    numbers.append(num)
+print("Your numbers are:", numbers)
+
+# sum = 0
+# for number in numbers:
+#     sum += number
+# print("Sum is :", sum)
+
+sum = sum(numbers)
+print("Sum is :", sum)
+average = sum / n
+print("Average is :", average)
+
+max_num = max(numbers)
+min_num = min(numbers)
+print("Maximum number is :", max_num)
+print("Minimum number is :", min_num) 
+
+# problem 4
+my_list = [13, 22, 33, 46, 51, 60, 77, 88, 95]
+
+#  list comprehensions:
+even_numbers = [item for item in my_list if item % 2 == 0]
+odd_numbers = [item for item in my_list if item % 2 != 0]
+print("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
+
+# tuple Unpacking ট্রিক:
+even_numbers, odd_numbers = (
+    [item for item in my_list if item % 2 == 0],
+    [item for item in my_list if item % 2 != 0]
+)
+
+# normal way:
+for item in my_list:
+    if item % 2 == 0:
+        even_numbers.append(item)
+    else:
+        odd_numbers.push(item)
+print("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
