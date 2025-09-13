@@ -1,13 +1,22 @@
+# List items are ordered, changeable, and allow duplicate values.
+# store multiple items in a single variable.
+
+# list methods: append(), insert(), pop(), remove(), clear(), sort(), reverse(), count(), index(), extend()
 my_list = [10, 20, 30, 40]
 print(my_list[0])
+
 my_list[0] = 33
 my_list.append(55)
+
 my_list.insert(1,50)
 print(my_list)
+
 my_list.pop()
 print(my_list)
+
 del my_list[1]
 print(my_list)
+
 print(len(my_list))
 
 # access with loop 
@@ -152,6 +161,27 @@ even_numbers, odd_numbers = (
     [item for item in my_list if item % 2 == 0],
     [item for item in my_list if item % 2 != 0]
 )
+
+# Dictionary comprehension:
+number = {
+    "even" : [item for item in my_list if item % 2 == 0],
+    "odd" : [item for item in my_list if item % 2 != 0]
+}
+even_numbers = number["even"]
+odd_numbers = number["odd"]
+
+print ("Even numbers:", even_numbers)
+print("Odd numbers:", odd_numbers)
+
+
+# set comprehension
+my_list = [13, 22, 33, 46, 51, 60, 77, 88, 95]
+
+even_numbers = {item for item in my_list if item % 2 == 0}
+odd_numbers = {item for item in my_list if item % 2 != 0}
+
+print("Even numbers (set):", even_numbers)
+print("Odd numbers (set):", odd_numbers)
 
 # normal way:
 for item in my_list:
