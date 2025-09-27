@@ -8,16 +8,35 @@ print(my_list[0])
 my_list[0] = 33
 my_list.append(55)
 
-my_list.insert(1,50)
+my_list.insert(1,50) # index, value
 print(my_list)
 
-my_list.pop()
+my_list.pop() # default last item remove
+print(my_list)
+
+my_list.remove(30)
+print(my_list)
+
+my_list.pop(2)
 print(my_list)
 
 del my_list[1]
 print(my_list)
 
+my_list.clear() # empty list 
+print(my_list)
+
 print(len(my_list))
+
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist) # ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist) # ['apple', 'banana', 'cherry', 'kiwi', 'orange']
 
 # access with loop 
 for item in my_list: 
@@ -191,3 +210,14 @@ for item in my_list:
         odd_numbers.push(item)
 print("Even numbers:", even_numbers)
 print("Odd numbers:", odd_numbers)
+
+# problem 5: reverse a list
+
+num_elements = int(input("How many elements do you want to add in the list? ")) 
+my_list = []
+for i in range(num_elements):
+        element = input(f"Enter element {i+1}: ")
+        my_list.append(element)
+print(f"Your list is: {my_list}")
+my_list.reverse() # my_list[::-1]
+print(f"Reversed list is: {my_list}")
