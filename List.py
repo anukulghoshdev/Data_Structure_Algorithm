@@ -55,7 +55,7 @@ for i in names:
     print(f"{i}", end=", ")
 
 
-# practice problem 2
+# practice problem 2 type 1:
 numbers = []
 i=0
 while i<5:
@@ -67,6 +67,7 @@ while i<5:
     i+=1
 for n in numbers:
     print(f"{n}", end=" ")
+
 
 
 # practice problem 2: type2
@@ -82,6 +83,7 @@ while i < 5:
 
 for n in numbers:
     print(f"{n}", end=" ")
+
 
 
 # practice problem 2: type 3
@@ -100,5 +102,15 @@ print("The numbers are: ", end=" ")
 for n in numbers:  
     print(n, end=" ")  
 
+# problem 3
+numbers = []  
+
+n = int(input("How many numbers do you want to enter? "))
+
+for i in range(n):
+    num = int(input(f"Enter number {i+1}: "))
+    numbers.append(num)
+
+print("Your numbers are:", numbers)
 
 
