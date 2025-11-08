@@ -221,3 +221,15 @@ for i in range(num_elements):
 print(f"Your list is: {my_list}")
 my_list.reverse() # my_list[::-1]
 print(f"Reversed list is: {my_list}")
+
+
+list1 = ["Python", "is"]
+list2 = ["fun", "powerful"]
+combined_list = list1 + list2
+print(combined_list)  # Output: ['Python', 'is', 'fun', 'powerful']
+
+
+data = [5, 10, 15, 20, 25, 30, 35]
+print(data[1:5])  
+print(data[:5])  
+print(data[-3:]) 

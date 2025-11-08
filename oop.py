@@ -7,12 +7,12 @@
 
 # Class definition
 class Car:
-    # Class attribute (সব objects এর জন্য common)
+    # Class attribute (সব objects এর জন্য common) / # Class property
     wheels = 4
     
     # Constructor method (object তৈরি হলে automatically call হয়)
     def __init__(self, brand, model, year):
-        # Instance attributes (প্রতিটি object এর নিজস্ব)
+        # Instance attributes (প্রতিটি object এর নিজস্ব) / # Instance property
         self.brand = brand
         self.model = model
         self.year = year
