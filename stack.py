@@ -1,87 +1,60 @@
-class Node: 
-    x = 4
-    def __init__(): 
-        pass
-###
-class Person:
-    species = "Human" 
-    def __init__(self, name, age):
-        self.name = name 
-        self.age = age
 
-    def greet(self):
-        pass
-        # print(f"Hello, my name is {self.name} and I am {self.age} years old.")
-    
-    def display_info(self):
-        print(f"Name: {self.name}, Age: {self.age}")
+# stack using list
+stack = []
+stack.append(1)
+stack.append(2)     
+stack.append(3)     
+print("Initial stack:", stack)  
+top = stack.pop()  
+print("Popped element:", top)
+print("after pop :", stack)  
+print("top element:", stack[-1]) 
 
 
-p1 = Person("Alice", 30)
+# stack using deque 
+from collections import deque 
+stack = deque()
+stack.append("a")
+stack.append("b")
+stack.append("c")
+print(stack)
+stack.append("d")    
+print(stack)
 
-p1.greet()  # Hello, my name is Alice and I am 30 years old.
-p1.display_info()
 
-print(p1.name)  
-print(p1.age)   
-
-
-class Calculator:
-    def add(self, a, b):
-        return a + b
-    def subtract(self, a, b):
-        return a - b
-    def multiply(self, a, b):
-        return a * b
-    def divide(self, a, b):
-        if b != 0:
-            return a / b
-        else:
-            return "Error! Division by zero."
-calc = Calculator()
-print(calc.add(3, 5))        # 15
-print(calc.subtract(10, 4))  # 6
-print(calc.multiply(2, 6))   # 12   
-print(calc.divide(46, 2))     # 4.0
-print(calc.divide(4, 0))     # Error! Division by zero.
-print(calc.divide(0, 4))     # 0.0
-
-class Playlist:
+# full implamentation
+class Stack:
     def __init__(self):
-        self.songs = []
+        self.items = []
+
+    def is_empty(self):
+        return len(self.items) == 0 
     
-    def add_song(self, song):
-        self.songs.append(song)
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+        else:
+            return "Stack is empty!"
+        
+    def peek(self):
+            if self.is_empty():
+                return "Stack is empty!"
+            else:
+                return self.items[-1]
+    def size(self):
+        return len(self.items)
     
-    def remove_song(self, song):
-        if song in self.songs:
-            self.songs.remove(song)
-    
-    def display_songs(self):
-        for song in self.songs:
-            print(f"- {song}")
+s1 = Stack()
+s1.push(10)
+s1.push(20)
+s1.push(30)
+print(s1.items)  # [10, 20, 30]
 
-class Playlist:
-  def __init__(self, name):
-    self.name = name
-    self.songs = []
+s1.pop()
+print(s1.items)  # [10, 20]
 
-  def add_song(self, song):
-    self.songs.append(song)
-    print(f"Added: {song}")
-
-  def remove_song(self, song):
-    if song in self.songs:
-      self.songs.remove(song)
-      print(f"Removed: {song}")
-
-  def show_songs(self):
-    print(f"Playlist '{self.name}':")
-    for song in self.songs:
-      print(f"- {song}")
-
-my_playlist = Playlist("Favorites")
-my_playlist.add_song("Dustu Kokil")
-my_playlist.add_song("Ay Ay chad mama")
-my_playlist.add_song("Lage Ora Dhura")
-my_playlist.show_songs()
+s1.peek()
+print(s1.peek())  # 20
