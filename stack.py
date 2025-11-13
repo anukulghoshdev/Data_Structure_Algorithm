@@ -58,3 +58,49 @@ print(s1.items)  # [10, 20]
 
 s1.peek()
 print(s1.peek())  # 20
+
+
+
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if len(self.items) == 0:
+            return None
+        return self.items.pop()
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+
+def is_valid(s):
+    stack = Stack()
+    
+    # Pair mapping
+    pairs = {
+        ')': '(', 
+        '}': '{', 
+        ']': '['
+    }
+
+    for char in s:
+        if char in "([{":
+            stack.push(char)
+        elif char in ")]}":
+            top = stack.pop()
+           
+            if top != pairs[char]:
+                return False
+    return stack.is_empty()
+
+
+# Test
+print(is_valid("{[]}"))   # True (Valid)
+print(is_valid("(]"))     # False (Invalid)
+print(is_valid("([)]"))   # False
+print(is_valid("((()))")) # True
+
